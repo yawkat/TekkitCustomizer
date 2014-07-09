@@ -49,8 +49,8 @@ class ContrabandScannerTask implements Runnable
 				Chunk [] chunks = world.getLoadedChunks();
 				
 				//scan 5% of chunks each pass
-				int firstChunk = (int)(chunks.length * (nextChunkPercentile / 100f));
-				int lastChunk = (int)(chunks.length * ((nextChunkPercentile + 5) / 100f));
+				int firstChunk = 0;
+				int lastChunk = chunks.length;
 				
 				//for each chunk to be scanned
 				for(int j = firstChunk; j < lastChunk; j++)
